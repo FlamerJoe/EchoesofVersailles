@@ -5,6 +5,9 @@
 
 # KOI
 
+Broken_Promises:0 "Broken Promises"
+Broken_Promises_desc:0 "Coming back from Conference empty handedly, it is obvious that Italy must take the law into our own hands."
+
 March_On_Rome:0 "March On Rome"
 March_On_Rome_desc:0 "Fate of Italy is on the decision of our King. Prime minister is threatening to resign if we don't declare martial law and stop these brutes."
 
@@ -64,7 +67,7 @@ clamp_communism:0 "Strangle Communism"
 clamp_communism_desc:0 "We must united the people first even it means we get rid of the unwanted."
 
 pull_tooth:0  "Pull the Rotten Tooth"
-pull_tooth_desc:0 ""
+pull_tooth_desc:0 "When you have a rotten tooth you have two possibilities open to you: either you pull the tooth or you fill it with gold."
 
 prepare_elections:0 "Prepare for Elections"
 prepare_elections_desc:0 "We must win the elections if we want to be seen as a legitimate government by everyone." 
@@ -113,7 +116,7 @@ reform_over_desc:0 "With the army and navy strengthened, we can look further to 
 
 join_allies:0 "Join Allies"
 join_allies_desc:0 "We must get together if we wish to stop this Soviet Union."
-join_allies_desc:0 "We must get together if we wish to stop this Soviet Union."
+
 
 
 
