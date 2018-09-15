@@ -1,0 +1,887 @@
+focus_tree = {
+	id = New_file
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = KOI
+		}
+	}
+	default = no
+	focus = {
+		id = Broken_Promises
+		text = Broken_Promises
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 10
+		x = 21
+		y = 0
+			prerequisite = {
+					
+				}
+			completion_reward = {
+					add_ideas = { vittoria_mutilata }
+					add_stability = 0.1
+				}
+
+	}
+	focus = {
+		id = March_On_Rome
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		x = 16
+		y = 4
+
+	}
+	focus = {
+		id = Resolve_conflicts
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		prerequisite = {
+			focus = Broken_Promises
+		}
+		x = 6
+		y = 1
+
+	}
+	focus = {
+		id = deal_fiume
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Resolve_conflicts
+		}
+		x = 1
+		y = 2
+
+	}
+	focus = {
+		id = Question_of_Albania
+		text = Question_of_Albania
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		prerequisite = {
+			focus = Resolve_conflicts
+		}
+		x = 6
+		y = 2
+
+	}
+	focus = {
+		id = Withdraw_from_Albania
+		text = Withdraw_from_Albania
+		icon = GFX_goal_tripartite_pact
+		cost = 10
+		prerequisite = {
+			focus = Question_of_Albania
+		}
+		mutually_exclusive = {
+			focus = Vlato_War
+		}
+		x = 4
+		y = 3
+
+	}
+	focus = {
+		id = Vlato_War
+		text = Vlato_War
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10
+		prerequisite = {
+			focus = Question_of_Albania
+		}
+		mutually_exclusive = {
+			focus = Withdraw_from_Albania
+		}
+		x = 8
+		y = 3
+
+	}
+	focus = {
+		id = national_fascist_party
+		icon = GFX_focus_generic_italy_first
+		cost = 10
+		prerequisite = {
+			focus = Resolve_conflicts
+		}
+		x = 11
+		y = 2
+
+	}
+	focus = {
+		id = end_bienio_Rosso
+		icon = GFX_focus_prc_agrarian_socialism
+		cost = 10
+		prerequisite = {
+			focus = national_fascist_party
+		}
+		x = 11
+		y = 3
+
+	}
+	focus = {
+		id = Il_Re_soldato
+		text = Il_Re_soldato
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10
+		prerequisite = {
+			focus = March_On_Rome
+		}
+		mutually_exclusive = {
+			focus = Go_With_Mussolini
+		}
+		x = 11
+		y = 5
+			completion_reward = {
+					start_civil_war = {
+							ruling_party = fascist
+							ideology = fascism
+							size = 0.8
+							only_own_territory = no
+							capital = 282
+							states = { 158  159  160  2 }
+							keep_unit_leaders = { 750  751  752 }
+						}
+				}
+
+	}
+	focus = {
+		id = consolidate_power
+		icon = GFX_focus_SAF_colonialist_crusade
+		cost = 10
+		prerequisite = {
+			focus = Il_Re_soldato
+		}
+		x = 11
+		y = 6
+
+	}
+	focus = {
+		id = clamp_fascism
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 10
+		prerequisite = {
+			focus = consolidate_power
+		}
+		x = 11
+		y = 7
+
+	}
+	focus = {
+		id = deal_with_habsburg
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10
+		prerequisite = {
+			focus = clamp_fascism
+		}
+		mutually_exclusive = {
+			focus = talk_kaiser
+		}
+		x = 9
+		y = 8
+
+	}
+	focus = {
+		id = talk_george
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = deal_with_habsburg
+		}
+		x = 9
+		y = 9
+
+	}
+	focus = {
+		id = talk_kaiser
+		icon = GFX_focus_ger_return_of_the_kaiser
+		cost = 10
+		prerequisite = {
+			focus = clamp_fascism
+		}
+		mutually_exclusive = {
+			focus = deal_with_habsburg
+		}
+		x = 13
+		y = 8
+
+	}
+	focus = {
+		id = bring_kaiser
+		icon = GFX_focus_ger_oppose_hitler
+		cost = 10
+		prerequisite = {
+			focus = talk_kaiser
+		}
+		x = 13
+		y = 9
+
+	}
+	focus = {
+		id = help_king_spain
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = talk_george
+			focus = bring_kaiser
+		}
+		x = 11
+		y = 10
+
+	}
+	focus = {
+		id = Go_With_Mussolini
+		text = Go_With_Mussolini
+		icon = GFX_focus_ger_assassinate_mussolini
+		cost = 10
+		prerequisite = {
+			focus = March_On_Rome
+		}
+		mutually_exclusive = {
+			focus = Il_Re_soldato
+		}
+		x = 21
+		y = 5
+
+	}
+	focus = {
+		id = clamp_communism
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		cost = 10
+		prerequisite = {
+			focus = Go_With_Mussolini
+		}
+		mutually_exclusive = {
+			focus = pull_tooth
+		}
+		x = 19
+		y = 6
+
+	}
+	focus = {
+		id = pull_tooth
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Go_With_Mussolini
+		}
+		mutually_exclusive = {
+			focus = clamp_communism
+		}
+		x = 23
+		y = 6
+
+	}
+	focus = {
+		id = prepare_elections
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = clamp_communism
+			focus = pull_tooth
+		}
+		x = 21
+		y = 7
+
+	}
+	focus = {
+		id = pretense_of_democracy
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = {
+			focus = prepare_elections
+		}
+		x = 21
+		y = 9
+
+	}
+	focus = {
+		id = listen_gabriele
+		icon = GFX_focus_chi_british_cooperation
+		cost = 10
+		prerequisite = {
+			focus = pretense_of_democracy
+		}
+		mutually_exclusive = {
+			focus = Mare_nostrum
+		}
+		x = 15
+		y = 10
+
+	}
+	focus = {
+		id = friendship_ethiopia
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = listen_gabriele
+		}
+		x = 13
+		y = 12
+
+	}
+	focus = {
+		id = trade_agreement
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+		prerequisite = {
+			focus = listen_gabriele
+		}
+		x = 17
+		y = 12
+
+	}
+	focus = {
+		id = Mare_nostrum
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = pretense_of_democracy
+		}
+		mutually_exclusive = {
+			focus = listen_gabriele
+		}
+		x = 27
+		y = 10
+
+	}
+	focus = {
+		id = trick_ethiopia
+		icon = GFX_focus_cze_german_puppet
+		cost = 10
+		prerequisite = {
+			focus = Mare_nostrum
+		}
+		x = 21
+		y = 12
+
+	}
+	focus = {
+		id = aid_hitler
+		icon = GFX_focus_chi_mission_to_germany
+		cost = 10
+		prerequisite = {
+			focus = Mare_nostrum
+		}
+		x = 24
+		y = 12
+
+	}
+	focus = {
+		id = newfocus_1
+		text = Rehabilitate_Economy
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = Broken_Promises
+		}
+		x = 28
+		y = 1
+			completion_reward = {
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = newfocus_2
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10
+		prerequisite = {
+			focus = newfocus_1
+		}
+		x = 26
+		y = 2
+
+	}
+	focus = {
+		id = newfocus_4
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		prerequisite = {
+			focus = newfocus_2
+		}
+		x = 26
+		y = 3
+
+	}
+	focus = {
+		id = march_austria
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Mare_nostrum
+		}
+		x = 27
+		y = 12
+
+	}
+	focus = {
+		id = newfocus_3
+		icon = GFX_goal_generic_construction
+		cost = 10
+		prerequisite = {
+			focus = newfocus_1
+		}
+		x = 30
+		y = 2
+
+	}
+	focus = {
+		id = newfocus_8
+		icon = GFX_focus_research
+		cost = 10
+		prerequisite = {
+			focus = newfocus_3
+		}
+		x = 30
+		y = 3
+
+	}
+	focus = {
+		id = newfocus_5
+		icon = GFX_focus_generic_industry_3
+		cost = 10
+		prerequisite = {
+			focus = newfocus_4
+		}
+		prerequisite = {
+			focus = newfocus_8
+		}
+		x = 28
+		y = 4
+
+	}
+	focus = {
+		id = newfocus_6
+		icon = GFX_goal_generic_production
+		cost = 10
+		prerequisite = {
+			focus = newfocus_5
+		}
+		x = 28
+		y = 5
+
+	}
+	focus = {
+		id = newfocus_60
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = newfocus_6
+		}
+		x = 30
+		y = 6
+
+	}
+	focus = {
+		id = newfocus_72
+		icon = GFX_focus_generic_steel
+		cost = 10
+		prerequisite = {
+			focus = newfocus_6
+		}
+		x = 26
+		y = 6
+
+	}
+	focus = {
+		id = newfocus_61
+		icon = GFX_goal_generic_build_tank
+		cost = 10
+		prerequisite = {
+			focus = newfocus_60
+		}
+		x = 30
+		y = 7
+
+	}
+	focus = {
+		id = newfocus_7
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10
+		prerequisite = {
+			focus = newfocus_61
+		}
+		x = 30
+		y = 8
+
+	}
+	focus = {
+		id = demand_fiume
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Mare_nostrum
+		}
+		x = 30
+		y = 12
+
+	}
+	focus = {
+		id = roman_question
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Mare_nostrum
+		}
+		x = 33
+		y = 12
+
+	}
+	focus = {
+		id = newfocus_9
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = Broken_Promises
+		}
+		x = 41
+		y = 1
+
+	}
+	focus = {
+		id = horse
+		icon = GFX_goal_generic_cavalry
+		cost = 10
+		prerequisite = {
+			focus = newfocus_9
+			focus = newfocus_9
+		}
+		prerequisite = {
+			focus = newfocus_9
+		}
+		x = 35
+		y = 2
+
+	}
+	focus = {
+		id = newfocus_64
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = horse
+		}
+		x = 35
+		y = 3
+
+	}
+	focus = {
+		id = newfocus_66
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		prerequisite = {
+			focus = newfocus_64
+		}
+		x = 35
+		y = 4
+
+	}
+	focus = {
+		id = newfocus_30
+		icon = GFX_focus_chi_army_reform
+		cost = 10
+		prerequisite = {
+			focus = newfocus_66
+		}
+		x = 35
+		y = 5
+
+	}
+	focus = {
+		id = newfocus_65
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10
+		prerequisite = {
+			focus = newfocus_9
+		}
+		x = 39
+		y = 2
+
+	}
+	focus = {
+		id = newfocus_41
+		icon = GFX_goal_continuous_armor_production
+		cost = 10
+		prerequisite = {
+			focus = newfocus_65
+		}
+		x = 39
+		y = 3
+
+	}
+	focus = {
+		id = doctrine
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		prerequisite = {
+			focus = newfocus_41
+		}
+		x = 39
+		y = 4
+
+	}
+	focus = {
+		id = newfocus_34
+		icon = GFX_focus_generic_combined_arms
+		cost = 10
+		prerequisite = {
+			focus = doctrine
+		}
+		x = 39
+		y = 5
+
+	}
+	focus = {
+		id = land_complete
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = newfocus_30
+		}
+		prerequisite = {
+			focus = newfocus_34
+		}
+		x = 37
+		y = 6
+
+	}
+	focus = {
+		id = newfocus_39
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10
+		prerequisite = {
+			focus = newfocus_9
+		}
+		x = 43
+		y = 2
+
+	}
+	focus = {
+		id = newfocus_40
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10
+		prerequisite = {
+			focus = newfocus_39
+		}
+		x = 43
+		y = 3
+
+	}
+	focus = {
+		id = doctrine_bonus
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10
+		prerequisite = {
+			focus = newfocus_40
+		}
+		x = 43
+		y = 4
+
+	}
+	focus = {
+		id = newfocus_38
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10
+		prerequisite = {
+			focus = doctrine_bonus
+		}
+		x = 43
+		y = 5
+
+	}
+	focus = {
+		id = newfocus_35
+		icon = GFX_focus_generic_license_production
+		cost = 10
+		prerequisite = {
+			focus = reform_over
+		}
+		x = 43
+		y = 8
+
+	}
+	focus = {
+		id = newfocus_42
+		icon = GFX_goal_generic_occupy_start_war
+		cost = 10
+		prerequisite = {
+			focus = reform_over
+		}
+		x = 46
+		y = 8
+
+	}
+	focus = {
+		id = newfocus_43
+		icon = GFX_goal_continuous_air_production
+		cost = 10
+		prerequisite = {
+			focus = newfocus_9
+		}
+		x = 47
+		y = 2
+
+	}
+	focus = {
+		id = newfocus_44
+		icon = GFX_goal_generic_air_fighter
+		cost = 10
+		prerequisite = {
+			focus = newfocus_43
+		}
+		x = 47
+		y = 3
+
+	}
+	focus = {
+		id = plane2
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10
+		prerequisite = {
+			focus = newfocus_43
+		}
+		prerequisite = {
+			focus = newfocus_67
+		}
+		x = 47
+		y = 5
+
+	}
+	focus = {
+		id = offer_help_ethiopia
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = friendship_ethiopia
+		}
+		x = 13
+		y = 13
+
+	}
+	focus = {
+		id = war_ethiopia
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = trick_ethiopia
+		}
+		x = 21
+		y = 13
+
+	}
+	focus = {
+		id = demand_corfu
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = demand_fiume
+		}
+		x = 30
+		y = 13
+
+	}
+	focus = {
+		id = sea_and_air_complete
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = newfocus_38
+		}
+		prerequisite = {
+			focus = plane2
+		}
+		x = 45
+		y = 6
+
+	}
+	focus = {
+		id = reform_over
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = sea_and_air_complete
+		}
+		prerequisite = {
+			focus = land_complete
+		}
+		x = 41
+		y = 7
+
+	}
+	focus = {
+		id = marine
+		icon = GFX_focus_secret_rearmament
+		cost = 10
+		prerequisite = {
+			focus = reform_over
+		}
+		x = 39
+		y = 8
+
+	}
+	focus = {
+		id = newfocus_67
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10
+		prerequisite = {
+			focus = newfocus_44
+		}
+		x = 47
+		y = 4
+
+	}
+	focus = {
+		id = newfocus_69
+		icon = GFX_focus_generic_paratrooper
+		cost = 10
+		prerequisite = {
+			focus = reform_over
+		}
+		x = 36
+		y = 8
+
+	}
+	focus = {
+		id = boost_spain_or_help
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Mare_nostrum
+		}
+		x = 36
+		y = 12
+
+	}
+	focus = {
+		id = newfocus_71
+		icon = GFX_focus_generic_rubber
+		cost = 10
+		prerequisite = {
+			focus = newfocus_73
+		}
+		x = 26
+		y = 8
+
+	}
+	focus = {
+		id = newfocus_73
+		icon = GFX_focus_research2
+		cost = 10
+		prerequisite = {
+			focus = newfocus_72
+		}
+		x = 26
+		y = 7
+
+	}
+	focus = {
+		id = join_allies
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = trade_agreement
+		}
+		x = 17
+		y = 13
+
+	}
+}

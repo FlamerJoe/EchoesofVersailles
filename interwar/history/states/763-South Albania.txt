@@ -1,0 +1,29 @@
+state={
+	id=763
+	name="STATE_763"
+		resources={
+		aluminium=2.000
+		chromium=2.000
+	}
+	state_category = city
+	
+	history = {
+	owner = KOI
+	add_core_of = ALB
+	add_claim_by = KOI
+	
+	buildings = {
+	infrastructure = 4
+	industrial_complex = 1
+	arms_factory = 1
+	}
+	
+	}
+	
+	
+	provinces={
+		914 11767 
+	}
+	manpower= 500000
+	buildings_max_level_factor=1.000
+}

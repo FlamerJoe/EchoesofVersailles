@@ -1,0 +1,30 @@
+ideas = {	
+
+country = {
+
+	bienio_rosso = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.1
+				fascism_drift = 0.1
+				communism_acceptance = 85
+				fascism_acceptance = 85
+			}
+		}
+		
+}
+
+}

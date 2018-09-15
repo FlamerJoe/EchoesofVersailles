@@ -1,0 +1,29 @@
+state={
+	id=764
+	name="STATE_764"
+	
+	state_category=rural
+	
+    resources={
+		aluminium=2.000
+		chromium=2.000
+	}
+	
+	history = {
+	owner = DST
+	add_core_of = DST
+	
+	buildings = {
+	
+	infrastructure = 3
+	industrial_complex = 1
+	arms_factory = 1
+	
+	            }
+	}
+	provinces={
+		1905 5068 8094 10921 12814 
+	}
+	manpower= 600000
+	buildings_max_level_factor=1.000
+}

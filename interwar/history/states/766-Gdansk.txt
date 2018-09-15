@@ -1,0 +1,24 @@
+state={
+	id=766
+	state_category = city
+	name="STATE_766"
+	provinces={
+		362 
+	}
+	
+	history = { 
+	buildings = {
+	industrial_complex = 1
+	362 = {
+				naval_base = 3
+
+		}
+	}
+	add_core_of = POL
+	add_core_of = DZG
+	owner = POL
+	
+}
+	manpower= 300400
+	buildings_max_level_factor=1.000
+}
